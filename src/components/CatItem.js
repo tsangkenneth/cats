@@ -8,6 +8,7 @@ const CatItem = (props) => {
       <p className="cat-item__fact">
         { props.fact }
       </p>
+      <button onClick={props.onRemoveButtonClick} type="button">Remove</button>
     </div>
   );
 }

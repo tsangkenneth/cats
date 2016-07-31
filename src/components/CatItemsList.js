@@ -9,7 +9,8 @@ const CatItemsList = (props) => {
         <CatItem
         key={ index }
         image={ item.image }
-        fact={ item.fact } />
+        fact={ item.fact }
+        onRemoveButtonClick={() => props.onRemoveButtonClick(index)} />
       );
     });
   };

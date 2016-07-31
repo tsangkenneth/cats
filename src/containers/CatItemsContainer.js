@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { removeCatItem } from '../actions'
 import CatItemsList from '../components/CatItemsList';
 
 const mapStateToProps = (state) => {
@@ -7,8 +8,17 @@ const mapStateToProps = (state) => {
   }
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onRemoveButtonClick: (index) => {
+      dispatch(removeCatItem(index));
+    }
+  }
+}
+
 const CatItemsContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(CatItemsList);
 
 export default CatItemsContainer;

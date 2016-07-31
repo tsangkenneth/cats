@@ -17,3 +17,10 @@ export const addCatItems = (catItems) => {
     ]
   }
 }
+
+export const removeCatItem = (index) => {
+  return {
+    type: 'REMOVE_CAT_ITEM',
+    index
+  }
+}
