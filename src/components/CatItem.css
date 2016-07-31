@@ -4,13 +4,12 @@
   margin: 1em;
 }
 
+.cat-item__content {
+  padding: 0.5em 1em;
+}
+
 .cat-item__image {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-}
-
-.cat-item__fact {
-  font-style: italic;
-  padding: 0 1em;
 }

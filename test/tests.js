@@ -28,10 +28,9 @@ describe('Tests for CatItem component', () => {
     expect(catImage.hasClass('cat-item__image')).to.equal(true);
     expect(catImage.html()).to.contain('src="http://25.media.tumblr.com/tumblr_mcpaawXG3b1qze0hyo1_500.jpg"');
 
-    let catFact = catItem.childAt(1);
+    let catFact = catItem.childAt(1).childAt(0);
 
     expect(catFact.type()).to.equal('p');
-    expect(catFact.hasClass('cat-item__fact')).to.equal(true);
     expect(catFact.text()).to.equal(`Cats can't taste sweets.`);
   });
 });
