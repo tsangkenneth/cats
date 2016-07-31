@@ -1,5 +1,6 @@
 import React from 'react';
 import CatItem from './CatItem';
+import './CatItemsList.css';
 
 const CatItemsList = (props) => {
   let _constructList = () => {

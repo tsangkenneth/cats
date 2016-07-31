@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import CatItemsContainer from '../containers/CatItemsContainer';
 import logo from '../logo.svg';
-import '../App.css';
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Cats</h2>
-          <h3>Their pictures...and their facts...</h3>
-        </div>
-        <main className="App-main">
+          <h2>React <img src={logo} className="App-logo" alt="logo" /> Cats</h2>
+          <h3>Their pictures, their facts…</h3>
           <p className="App-intro">
-            Cat pictures and facts go here.
+          Look at cats, and learn a bit about them while wasting your time.
           </p>
-          <CatItemsContainer />
-        </main>
+        </div>
+        <CatItemsContainer />
       </div>
     );
   }

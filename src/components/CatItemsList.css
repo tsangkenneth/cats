@@ -1,0 +1,6 @@
+@media (min-width: 1000px) {
+  .cat-items-list {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
