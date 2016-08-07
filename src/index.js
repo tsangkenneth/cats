@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 import catItems from './reducers';
-import { addCatItems } from './actions';
+import { getCatItems } from './actions';
 import App from './components/App';
 import './index.css';
 
-let store = createStore(catItems);
+let store = createStore(
+  catItems,
+  applyMiddleware(
+    thunkMiddleware
+  )
+);
 
-let unsubscribe = store.subscribe(() => {
-  console.log(store.getState());
-});
-
-store.dispatch(addCatItems());
-
-unsubscribe();
+store.dispatch(getCatItems());
 
 ReactDOM.render(
   <Provider store={store}>

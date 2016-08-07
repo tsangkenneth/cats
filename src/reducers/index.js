@@ -4,7 +4,7 @@ const initialState = {
 
 const catItems = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_CAT_ITEMS':
+    case 'RECEIVE_CAT_ITEMS':
       return Object.assign({}, state, {
         catItems: action.catItems
       });
